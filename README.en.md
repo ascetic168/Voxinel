@@ -6,7 +6,7 @@
 
 ## Project Status
 
-✅ **Released v0.5.0** — Project renamed to EchoNote.
+✅ **Released v0.5.1** — Added AI Assistant mode: wake-word activation, multi-turn voice conversation, Markdown/KaTeX/Mermaid rich content rendering, text input bar.
 
 ## Why Use This Tool
 
@@ -44,6 +44,9 @@ Just hold the Ctrl key to start recording. The app automatically detects your in
 - **Listening Mode** — Double-tap right Ctrl to activate continuous listening and recognition until manually turned off
 - **Live Caption Mode** 🧪 — Captures system audio output for real-time recognition, displayed as multi-line captions in the overlay, with auto-saved transcript on close (mid-segment SenseVoice dual-color recognition is an experimental feature)
 - **Conference Mode** 🧪 — Simultaneously captures microphone (local) and system audio (remote), dual overlay shows both parties' recognition results in real time, built-in echo suppression, speaker voiceprint recognition, auto-saves merged transcript with timestamps, source and speaker labels on close
+- **AI Assistant Mode** — Background listening for a custom wake word, automatically starts AI conversation on detection, supports multi-turn voice context, text input bar fallback, AI responses rendered in Markdown/KaTeX/Mermaid rich format
+- **AI Proofreading** — Auto-corrects typos and punctuation via LLM when closing caption/conference mode
+- **AI Meeting Summary** — Auto-generates structured summary via LLM when saving conference transcript
 - **System Tray** — Runs in the background without disrupting your workflow
 - **Log Directory Shortcut** — One-click access to transcript folder from tray menu
 - **Simplified/Traditional Conversion** — Automatically converts Chinese text based on system locale, applies to both streaming and final results
