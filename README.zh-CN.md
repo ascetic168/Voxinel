@@ -1,4 +1,4 @@
-# EchoNote
+# Voxinel
 
 **[正體中文](README.md)** | **[简体中文](README.zh-CN.md)** | **[English](README.en.md)**
 
@@ -6,11 +6,11 @@
 
 ## 项目状态
 
-✅ **已发布 v0.5.1** — 新增 AI 助手模式：唤醒词启动、多轮语音对话、Markdown/KaTeX/Mermaid 丰富内容渲染、文字输入列。
+✅ **已发布 v0.5.2** — 修复生产版本 AI 助手丰富内容渲染（KaTeX 数学公式、Mermaid 甘特图/矩阵），CDN 依赖全部改为 npm 打包，离线可用。
 
 ## 为什么使用这个程序
 
-与市面上其他语音输入工具相比，EchoNote 解决了三个核心痛点：
+与市面上其他语音输入工具相比，Voxinel 解决了三个核心痛点：
 
 ### 1. 全本地运行，零隐私疑虑，无需 GPU
 所有语音识别都在本机完成，音频不会上传到任何服务器。采用串流 Zipformer 即时识别搭配 SenseVoice 离线修正的双引擎架构，**纯 CPU 即可流畅运行，无需独立显卡或 CUDA 环境**，无需网络、无需 API 密钥，下载模型后即可离线使用。
@@ -60,7 +60,7 @@
 - **串流 Zipformer**（即时）— 中英双语串流识别，边说边显示
 - **SenseVoice-Small (INT8)**（离线修正）— 高精度离线识别，支持中英日韩语，内置 ITN 直接输出标点
 - 特色：全程离线、零隐私疑虑、首次启动自动下载模型
-- 模型储存位置：`C:\ProgramData\EchoNote\models\`（Windows）
+- 模型储存位置：`C:\ProgramData\Voxinel\models\`（Windows）
 
 ### 腾讯云 ASR
 - **SentenceRecognition API** - 同步识别
@@ -77,7 +77,7 @@
 
 ### 安装
 
-请至 [Releases 页面](https://github.com/ascetic168/EchoNote/releases) 下载安装档。
+请至 [Releases 页面](https://github.com/ascetic168/Voxinel/releases) 下载安装档。
 
 ### 首次启动
 
