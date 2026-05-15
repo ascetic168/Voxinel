@@ -6,7 +6,7 @@
 
 ## Project Status
 
-✅ **Released v0.5.2** — Fixed production build rich content rendering (KaTeX math, Mermaid gantt/matrix diagrams), replaced all CDN dependencies with npm bundles for full offline support.
+✅ **Released v0.5.3** — Disabled reasoning by default in AI assistant for faster response; added single-character ASR noise filtering to prevent stray outputs like 'j', '4', '8'.
 
 ## Why Use This Tool
 
