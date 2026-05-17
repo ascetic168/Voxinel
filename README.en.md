@@ -6,7 +6,9 @@
 
 ## Project Status
 
-✅ **Released v0.5.3** — Disabled reasoning by default in AI assistant for faster response; added single-character ASR noise filtering to prevent stray outputs like 'j', '4', '8'.
+✅ **Released v0.5.4** — AI assistant TTS voice reply (MeloTTS zh_en model), automatic echo suppression during playback, dual-format output (concise speech + detailed screen Markdown).
+
+<details><summary>v0.5.3</summary>v0.5.3 — Disabled reasoning by default in AI assistant for faster response; added single-character ASR noise filtering to prevent stray outputs like 'j', '4', '8'.</details>
 
 ## Why Use This Tool
 
