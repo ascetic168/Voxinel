@@ -6,9 +6,9 @@
 
 ## Project Status
 
-✅ **Released v0.5.4** — AI assistant TTS voice reply (MeloTTS zh_en model), automatic echo suppression during playback, dual-format output (concise speech + detailed screen Markdown).
+✅ **Released v0.5.5** — Security hardening (DOMPurify XSS protection), model file integrity verification, cross-platform save path fix, caption mode stability improvement, code architecture refactoring, Ctrl+Shift+L instant assistant overlay hotkey, VAD detector pre-loading and reuse (eliminates per-recognition ONNX load delay), PTT/assistant mode mutual exclusion.
 
-<details><summary>v0.5.3</summary>v0.5.3 — Disabled reasoning by default in AI assistant for faster response; added single-character ASR noise filtering to prevent stray outputs like 'j', '4', '8'.</details>
+<details><summary>v0.5.4</summary>v0.5.4 — AI assistant TTS voice reply (MeloTTS zh_en model), automatic echo suppression during playback, dual-format output (concise speech + detailed screen Markdown).</details>
 
 ## Why Use This Tool
 
@@ -47,6 +47,7 @@ Just hold the Ctrl key to start recording. The app automatically detects your in
 - **Live Caption Mode** 🧪 — Captures system audio output for real-time recognition, displayed as multi-line captions in the overlay, with auto-saved transcript on close (mid-segment SenseVoice dual-color recognition is an experimental feature)
 - **Conference Mode** 🧪 — Simultaneously captures microphone (local) and system audio (remote), dual overlay shows both parties' recognition results in real time, built-in echo suppression, speaker voiceprint recognition, auto-saves merged transcript with timestamps, source and speaker labels on close
 - **AI Assistant Mode** — Background listening for a custom wake word, automatically starts AI conversation on detection, supports multi-turn voice context, text input bar fallback, AI responses rendered in Markdown/KaTeX/Mermaid rich format
+- **Ctrl+Shift+L Instant Assistant** — One-key shortcut to skip the wake word and jump straight into AI conversation, overlay appears immediately, TTS voice reply "I'm here."
 - **AI Proofreading** — Auto-corrects typos and punctuation via LLM when closing caption/conference mode
 - **AI Meeting Summary** — Auto-generates structured summary via LLM when saving conference transcript
 - **System Tray** — Runs in the background without disrupting your workflow
