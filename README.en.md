@@ -6,9 +6,11 @@
 
 ## Project Status
 
-✅ **Released v0.5.5** — Security hardening (DOMPurify XSS protection), model file integrity verification, cross-platform save path fix, caption mode stability improvement, code architecture refactoring, Ctrl+Shift+L instant assistant overlay hotkey, VAD detector pre-loading and reuse (eliminates per-recognition ONNX load delay), PTT/assistant mode mutual exclusion.
+✅ **Released v0.5.6** — New optional FireRedASR high-accuracy offline mode, Gemini cloud recognition upgraded to the latest 3.5 series, improved AI assistant voice quality, and the TTS speed setting now takes effect.
 
-<details><summary>v0.5.4</summary>v0.5.4 — AI assistant TTS voice reply (MeloTTS zh_en model), automatic echo suppression during playback, dual-format output (concise speech + detailed screen Markdown).</details>
+<details><summary>v0.5.5</summary>v0.5.5 — Security and stability improvements, caption mode improvements, Ctrl+Shift+L instant assistant overlay hotkey.</details>
+
+<details><summary>v0.5.4</summary>v0.5.4 — AI assistant TTS voice reply, automatic echo suppression during playback, dual-format output (concise speech + detailed screen Markdown).</details>
 
 ## Why Use This Tool
 
@@ -35,10 +37,10 @@ Just hold the Ctrl key to start recording. The app automatically detects your in
 - **CPU-Only, No GPU Needed** — Runs smoothly on any modern laptop or desktop; no CUDA or dedicated GPU required
 - **Streaming Real-Time Feedback** — See recognition results as you speak via the overlay floating window
 - **SenseVoice Quality Correction** — Automatically replaces streaming results with high-accuracy offline engine output
-- **SenseVoice Built-in Punctuation** — ITN enabled to output punctuation marks (。, ? etc.) directly, no extra model needed, faster recognition
-- **Voice Activity Detection** — Silero VAD filters out silent pauses, eliminating garbage characters (adjustable sensitivity)
+- **Automatic Punctuation** — Punctuation marks (。, ? etc.) output directly, no extra model needed, faster recognition
+- **Voice Activity Detection** — Ten-VAD filters out silent pauses, eliminating garbage characters (adjustable sensitivity)
 - **Offline Recognition** — No internet or API keys needed; models auto-download on first launch (including VAD model)
-- **China Mainland Mirror** — Auto-detects system language and uses hf-mirror.com for faster downloads in Simplified Chinese environments
+- **China Mainland Download Acceleration** — Automatically uses a mirror site for faster model downloads in Simplified Chinese environments
 - **Multi-Engine ASR** — Local engine (default), Tencent Cloud ASR, Google Gemini — customizable priority order
 - **Auto Fallback** — Set priority order; if one engine fails, the next one is tried automatically
 - **Cross-Platform** — Supports Windows, macOS, and Linux
@@ -61,7 +63,8 @@ Just hold the Ctrl key to start recording. The app automatically detects your in
 
 ### Local Dual-Engine (Default)
 - **Streaming Zipformer** (real-time) — Bilingual Chinese-English streaming recognition, results shown as you speak
-- **SenseVoice-Small (INT8)** (offline correction) — High-accuracy offline recognition, supports Chinese, English, Japanese, and Korean, with built-in ITN for direct punctuation output
+- **SenseVoice-Small** (offline correction) — High-accuracy offline recognition, supports Chinese, English, Japanese, and Korean, with automatic punctuation
+- **FireRedASR-Large** (optional high-accuracy mode) — A more accurate Chinese offline engine (~1.6GB, zh/en), downloaded separately from the settings page
 - Features: Fully offline, zero privacy concerns, auto-downloads models on first launch
 - Model storage location: `C:\ProgramData\Voxinel\models\` (Windows)
 
@@ -71,8 +74,8 @@ Just hold the Ctrl key to start recording. The app automatically detects your in
 - Requires: Secret ID + Secret Key
 
 ### Google Gemini
-- **Multimodal generateContent API** — AI-powered speech recognition
-- Supported models: gemini-2.5-flash, gemini-2.5-flash-lite
+- **Cloud AI speech recognition**
+- Supports the Gemini 3.5 / 3.8 series, with the dedicated transcription model gemini-3.5-transcribe as the default
 - Automatic punctuation, filler word removal, configurable output language
 - Requires: API Key
 
@@ -88,50 +91,14 @@ Download the installer from the [Releases page](https://github.com/ascetic168/Vo
 2. Click the "Download Models" button to auto-download streaming and offline recognition models
 3. Once downloaded, you're ready to go — no API key configuration needed
 
+> **Disk space requirement**: On first launch, offline recognition models must be downloaded from the internet (streaming Zipformer, SenseVoice, VAD, speaker voiceprint, TTS, etc.). Depending on the features you enable, allow roughly **600MB–2.2GB** of extra disk space: the default model set is about **600MB**, and adding the optional FireRedASR high-accuracy mode (~**1.6GB**) brings the total to about **2.2GB**.
+
 ### Usage
 
 1. Hold the Ctrl key and start speaking (the overlay window shows streaming recognition results in real time)
 2. Release the Ctrl key — SenseVoice automatically performs high-accuracy correction and adds punctuation
 3. Recognition results are automatically pasted into the current application
 4. Original clipboard content is automatically restored
-
-## Technical Architecture
-
-```
-User presses Ctrl
-       ↓
-  ContinuousRecorder (cpal continuous audio stream, 48kHz stereo)
-       ↓
-  Audio chunks → downmix to mono → resample to 16kHz
-       ↓
-  ┌──────────────────────────────────────────┐
-  │       Silero VAD Voice Activity Detection │
-  │  Pre-buffer preserves speech onset context │
-  │  Silent segments filtered automatically    │
-  └──────────────────────────────────────────┘
-       ↓ (speech chunks only)
-  ┌──────────────────────────────────────────┐
-  │       Streaming Recognition Thread         │
-  │         (Zipformer)                        │
-  │  Real-time partial text → Overlay display  │
-  │  Endpoint detection → send audio segments  │
-  │  to SenseVoice                             │
-  └──────────────────────────────────────────┘
-       ↓ (Ctrl released)
-  StreamingFinished → remaining audio sent to SenseVoice
-       ↓
-  ┌──────────────────────────────────────────┐
-  │     SenseVoice Correction Thread (offline) │
-  │  High-accuracy recognition → replaces     │
-  │  streaming results                        │
-  └──────────────────────────────────────────┘
-       ↓
-  SenseVoice built-in ITN punctuation (auto-adds 。, ? etc.)
-       ↓
-  convert.rs (Simplified/Traditional conversion based on system locale)
-       ↓
-  clipboard.rs (save original clipboard → set text → Ctrl+V → restore clipboard)
-```
 
 ## License
 
