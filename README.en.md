@@ -6,7 +6,7 @@
 
 ## Project Status
 
-✅ **Released v0.5.6** — New optional FireRedASR high-accuracy offline mode, Gemini cloud recognition upgraded to the latest 3.5 series, improved AI assistant voice quality, and the TTS speed setting now takes effect.
+✅ **Released v0.5.6** — Gemini cloud recognition upgraded to the latest 3.5 series, improved AI assistant voice quality, and the TTS speed setting now takes effect.
 
 <details><summary>v0.5.5</summary>v0.5.5 — Security and stability improvements, caption mode improvements, Ctrl+Shift+L instant assistant overlay hotkey.</details>
 
@@ -64,7 +64,6 @@ Just hold the Ctrl key to start recording. The app automatically detects your in
 ### Local Dual-Engine (Default)
 - **Streaming Zipformer** (real-time) — Bilingual Chinese-English streaming recognition, results shown as you speak
 - **SenseVoice-Small** (offline correction) — High-accuracy offline recognition, supports Chinese, English, Japanese, and Korean, with automatic punctuation
-- **FireRedASR-Large** (optional high-accuracy mode) — A more accurate Chinese offline engine (~1.6GB, zh/en), downloaded separately from the settings page
 - Features: Fully offline, zero privacy concerns, auto-downloads models on first launch
 - Model storage location: `C:\ProgramData\Voxinel\models\` (Windows)
 
@@ -91,7 +90,7 @@ Download the installer from the [Releases page](https://github.com/ascetic168/Vo
 2. Click the "Download Models" button to auto-download streaming and offline recognition models
 3. Once downloaded, you're ready to go — no API key configuration needed
 
-> **Disk space requirement**: On first launch, offline recognition models must be downloaded from the internet (streaming Zipformer, SenseVoice, VAD, speaker voiceprint, TTS, etc.). Depending on the features you enable, allow roughly **600MB–2.2GB** of extra disk space: the default model set is about **600MB**, and adding the optional FireRedASR high-accuracy mode (~**1.6GB**) brings the total to about **2.2GB**.
+> **Disk space requirement**: On first launch, offline recognition models must be downloaded from the internet (streaming Zipformer, SenseVoice, VAD, speaker voiceprint, TTS, etc.), totaling roughly **600MB** of extra disk space.
 
 ### Usage
 
