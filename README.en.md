@@ -6,7 +6,9 @@
 
 ## Project Status
 
-✅ **Released v0.5.6** — Gemini cloud recognition upgraded to the latest 3.5 series, improved AI assistant voice quality, and the TTS speed setting now takes effect.
+✅ **Released v0.5.7** — Fixed the focus race that occasionally left recognized text unpasted or pasted into the wrong window, and added a stuck-pending failsafe to the recognition state machine.
+
+<details><summary>v0.5.6</summary>v0.5.6 — Gemini cloud recognition upgraded to the latest 3.5 series, improved AI assistant voice quality, and the TTS speed setting now takes effect.</details>
 
 <details><summary>v0.5.5</summary>v0.5.5 — Security and stability improvements, caption mode improvements, Ctrl+Shift+L instant assistant overlay hotkey.</details>
 
