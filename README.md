@@ -6,11 +6,11 @@
 
 ## 專案狀態
 
-✅ **已發布 v0.5.7** — 修復辨識完成後偶爾無法貼上或貼到錯誤視窗的焦點問題，辨識狀態機新增卡死保底機制。
+✅ **已發布 v0.5.8** — 修復從托盤選單啟動傾聽模式時，辨識文字未貼入目標視窗的問題。
+
+<details><summary>v0.5.7</summary>v0.5.7 — 修復辨識完成後偶爾無法貼上或貼到錯誤視窗的焦點問題，辨識狀態機新增卡死保底機制。</details>
 
 <details><summary>v0.5.6</summary>v0.5.6 — Gemini 雲端辨識升級至最新 3.5 系列、AI 助手語音回覆音質提升、TTS 語速設定生效。</details>
-
-<details><summary>v0.5.5</summary>v0.5.5 — 安全性與穩定性強化、即時字幕模式改善、Ctrl+Shift+L 即時助手浮動視窗熱鍵。</details>
 
 <details><summary>v0.5.4</summary>v0.5.4 — AI 助手 TTS 語音回覆，語音播報時自動抑制麥克風辨識（回音消除），雙格式輸出（簡潔語音 + 詳細螢幕 Markdown）。</details>
 

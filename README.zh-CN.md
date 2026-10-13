@@ -6,11 +6,11 @@
 
 ## 项目状态
 
-✅ **已发布 v0.5.7** — 修复识别完成后偶尔无法粘贴或粘贴到错误窗口的焦点问题，识别状态机新增卡死保底机制。
+✅ **已发布 v0.5.8** — 修复从托盘菜单启动倾听模式时，识别文字未贴入目标窗口的问题。
+
+<details><summary>v0.5.7</summary>v0.5.7 — 修复识别完成后偶尔无法粘贴或粘贴到错误窗口的焦点问题，识别状态机新增卡死保底机制。</details>
 
 <details><summary>v0.5.6</summary>v0.5.6 — Gemini 云端识别升级至最新 3.5 系列、AI 助手语音回复音质提升、TTS 语速设置生效。</details>
-
-<details><summary>v0.5.5</summary>v0.5.5 — 安全性与稳定性强化、即时字幕模式改善、Ctrl+Shift+L 即时助手浮动窗口热键。</details>
 
 <details><summary>v0.5.4</summary>v0.5.4 — AI 助手 TTS 语音回复，语音播报时自动抑制麦克风识别（回声消除），双格式输出（简洁语音 + 详细屏幕 Markdown）。</details>
 
