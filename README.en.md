@@ -6,11 +6,11 @@
 
 ## Project Status
 
-✅ **Released v0.5.8** — Fixed recognized text not pasting into the target window when listening mode was started from the tray menu.
+✅ **Released v0.5.9** — Assistant TTS voice is now selectable with preview in Settings (defaults to a Mandarin voice), and the PTT hotkey no longer mis-fires while the assistant window is open.
+
+<details><summary>v0.5.8</summary>v0.5.8 — Fixed recognized text not pasting into the target window when listening mode was started from the tray menu.</details>
 
 <details><summary>v0.5.7</summary>v0.5.7 — Fixed the focus race that occasionally left recognized text unpasted or pasted into the wrong window, and added a stuck-pending failsafe to the recognition state machine.</details>
-
-<details><summary>v0.5.6</summary>v0.5.6 — Gemini cloud recognition upgraded to the latest 3.5 series, improved AI assistant voice quality, and the TTS speed setting now takes effect.</details>
 
 <details><summary>v0.5.4</summary>v0.5.4 — AI assistant TTS voice reply, automatic echo suppression during playback, dual-format output (concise speech + detailed screen Markdown).</details>
 
