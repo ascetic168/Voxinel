@@ -6,13 +6,13 @@
 
 ## Project Status
 
-✅ **Released v0.5.9** — Assistant TTS voice is now selectable with preview in Settings (defaults to a Mandarin voice), and the PTT hotkey no longer mis-fires while the assistant window is open.
+✅ **Released v0.5.10** — Hardened PTT against accidental triggers: chords with other modifiers no longer start a recording, any keypress now cancels it immediately, and empty recognition results no longer inject simulated paste keystrokes — fixing stray characters appearing during keyboard typing.
+
+<details><summary>v0.5.9</summary>v0.5.9 — Assistant TTS voice is now selectable with preview in Settings (defaults to a Mandarin voice), and the PTT hotkey no longer mis-fires while the assistant window is open.</details>
 
 <details><summary>v0.5.8</summary>v0.5.8 — Fixed recognized text not pasting into the target window when listening mode was started from the tray menu.</details>
 
 <details><summary>v0.5.7</summary>v0.5.7 — Fixed the focus race that occasionally left recognized text unpasted or pasted into the wrong window, and added a stuck-pending failsafe to the recognition state machine.</details>
-
-<details><summary>v0.5.4</summary>v0.5.4 — AI assistant TTS voice reply, automatic echo suppression during playback, dual-format output (concise speech + detailed screen Markdown).</details>
 
 ## Why Use This Tool
 
