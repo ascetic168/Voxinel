@@ -2,9 +2,110 @@
 
 **[正體中文](README.md)** | **[简体中文](README.zh-CN.md)** | **[English](README.en.md)**
 
-> Voice recognition input tool — Runs smoothly on CPU alone, no GPU required. Fully local, no cloud needed (ideal for enterprises or classified environments), low-latency streaming ASR + SenseVoice text correction
+![Version](https://img.shields.io/badge/version-0.5.10-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
 
-## Project Status
+> **Hold Ctrl, speak, and your words are typed for you.**
+> A fully local voice-input tool — streaming recognition shows text as you speak, SenseVoice polishes it after you release. Runs smoothly on CPU alone: no GPU, no cloud, no API keys.
+
+📖 **Full user manual**: [正體中文](docs/zh-TW/index.md) · [简体中文](docs/zh-CN/index.md) · [English](docs/en/index.md)
+
+## Up and Running in 30 Seconds
+
+| What you want | How |
+|---|---|
+| Type by speaking | Hold `Ctrl`, talk, release — recognized and pasted automatically |
+| Dictate long passages | Double-tap **right** `Ctrl` for Listening Mode; sentences paste themselves |
+| Caption a video or call | System tray menu → Live Caption Mode |
+| Meeting minutes + AI summary | System tray menu → Conference Mode |
+| Ask AI without typing | Say the wake word (小花同學), or press `Ctrl+Shift+L` |
+
+First time: [download the installer](https://github.com/ascetic168/Voxinel/releases) → models download automatically on launch (~600MB, one time only) → start talking.
+
+## Why Voxinel
+
+### 1. Audio Never Leaves Your Machine — and It Runs Fine without a GPU
+All recognition happens locally; audio is never uploaded to any server — ideal for enterprises and classified environments. The dual-engine architecture (streaming Zipformer + offline SenseVoice) **runs smoothly on CPU alone**: no dedicated GPU, no CUDA, no internet, no API keys.
+
+### 2. Text as You Speak, Polished When You're Done
+A unique streaming-offline collaboration: the streaming engine (Zipformer) starts recognizing the instant you press the hotkey and displays live results; when you release, the offline engine (SenseVoice) re-recognizes the full audio with higher accuracy and automatic punctuation. Real-time feedback and final quality — you get both.
+
+### 3. A Single Ctrl Key, without Disturbing How You Already Type
+Hold Ctrl to record; the app detects your intent the whole time: chords with other modifiers never start a recording, any keypress during recording cancels it instantly, too-short clips are discarded, and empty results paste nothing. Ctrl+C, Ctrl+V, and IME switching keep working untouched — and your clipboard content is restored after every paste.
+
+## How It Compares to Cloud-Only Voice Input
+
+| | Voxinel | Cloud-only tools |
+|---|---|---|
+| Where audio goes | Stays on your machine | Uploaded to third-party servers |
+| Offline use | ✅ Fully offline once models are installed | ❌ Requires internet |
+| Hardware | CPU only, no GPU | Not needed (but compute happens in the cloud) |
+| Live feedback | ✅ Text appears as you speak | Depends on the service |
+| Classified environments | ✅ Fits enterprise / government intranets | Usually prohibited |
+| Cost | Free; keys only if you opt into cloud engines | Subscription or metered billing |
+
+## Five Modes, Each with a Job
+
+| Mode | How to start | Audio source | Best for |
+|---|---|---|---|
+| **Push-to-Talk** (default) | Hold `Ctrl` | Microphone | Replacing typing |
+| **Listening Mode** | Double-tap right `Ctrl` | Microphone | Long dictation, sentence-by-sentence pasting |
+| **Live Caption Mode** 🧪 | System tray menu | System playback | Captions for videos／talks／calls |
+| **Conference Mode** 🧪 | System tray menu | Microphone + system audio | Meeting transcripts, speaker labels, AI summary |
+| **AI Assistant Mode** | Wake word or `Ctrl+Shift+L` | Microphone + text input | Hands-free Q&A with voice replies |
+
+Modes run exclusively and switch automatically; details in the [user manual](docs/en/index.md).
+
+## Features
+
+**Core input**
+- Fully local dual engine — streaming Zipformer live feedback + SenseVoice offline correction; zero privacy concerns
+- CPU-only performance — no GPU or CUDA needed on any modern laptop or desktop
+- Automatic punctuation — ，。？ output directly, no extra model
+- Voice activity detection — Ten-VAD filters silence and pauses, eliminating garbage characters (adjustable sensitivity)
+- Simplified/Traditional conversion — automatic based on system locale, for streaming and final results alike
+
+**Advanced modes**
+- Live Caption Mode 🧪 — real-time captions of system audio, transcript saved on close
+- Conference Mode 🧪 — local + remote dual-track recording, echo suppression, automatic speaker voiceprint labels
+- AI Assistant — custom wake word, multi-turn voice conversation, TTS replies (103 voices), Markdown／KaTeX／Mermaid rendering
+
+**AI-powered (via local Ollama or any OpenAI-compatible LLM)**
+- AI proofreading — transcripts auto-corrected when closing caption／conference mode
+- AI meeting summary — structured summary generated automatically when a conference ends
+
+**Conveniences**
+- Multi-engine ASR — local (default), Tencent Cloud ASR, Google Gemini; custom priority with automatic fallback
+- System tray resident, launch at startup, one-click transcript folder, clipboard protection
+- Multi-language UI — 繁體中文／简体中文／English
+- China Mainland download acceleration — automatic mirror site on Simplified Chinese systems
+
+## Supported ASR Engines
+
+| Engine | Type | Description |
+|---|---|---|
+| Local dual engine (default) | Offline | Streaming Zipformer (zh-en) + SenseVoice-Small (zh/en/ja/ko/yue, automatic punctuation); no keys; models auto-download on first launch |
+| Tencent Cloud ASR | Cloud | SentenceRecognition API; Mandarin／video／English／Cantonese／Sichuan dialect; needs Secret ID + Secret Key |
+| Google Gemini | Cloud | gemini-3.5-transcribe (default) and related models; automatic punctuation, filler-word removal; needs an API Key |
+
+Model storage location: `C:\ProgramData\Voxinel\models\` (Windows).
+
+## Installation & Quick Start
+
+1. Download the installer from the [Releases page](https://github.com/ascetic168/Voxinel/releases)
+2. First launch opens the settings window and auto-downloads all models (streaming, offline, VAD, speaker, TTS — ~**600MB** total)
+3. Once downloaded you're ready to go — no API keys to configure, fully offline from then on
+
+## Screenshots
+
+<!-- TODO: after adding real screenshots, uncomment the table below (images go in docs/images/)
+| Settings | Push-to-Talk overlay | Conference dual captions |
+|---|---|---|
+| ![Settings](docs/images/settings.png) | ![Push-to-Talk](docs/images/overlay-ptt.png) | ![Conference](docs/images/conference.png) |
+-->
+
+*Screenshots coming soon.*
+
+## Latest Release
 
 ✅ **Released v0.5.10** — Hardened PTT against accidental triggers: chords with other modifiers no longer start a recording, any keypress now cancels it immediately, and empty recognition results no longer inject simulated paste keystrokes — fixing stray characters appearing during keyboard typing.
 
@@ -13,93 +114,6 @@
 <details><summary>v0.5.8</summary>v0.5.8 — Fixed recognized text not pasting into the target window when listening mode was started from the tray menu.</details>
 
 <details><summary>v0.5.7</summary>v0.5.7 — Fixed the focus race that occasionally left recognized text unpasted or pasted into the wrong window, and added a stuck-pending failsafe to the recognition state machine.</details>
-
-## Why Use This Tool
-
-Compared to other voice input tools on the market, Voxinel solves three core pain points:
-
-### 1. Fully Local, Zero Privacy Concerns, No GPU Required
-All speech recognition runs on your machine — audio is never uploaded to any server. It uses a dual-engine architecture combining streaming Zipformer for real-time recognition with SenseVoice for offline correction. **Runs smoothly on CPU alone — no dedicated GPU or CUDA required.** No internet connection or API keys required; just download the models and use it offline.
-
-### 2. Streaming + Offline Dual-Engine Collaboration, Zero-Delay Feedback
-An innovative streaming-offline collaboration architecture:
-- **Streaming engine** (Zipformer): Starts recognizing the moment you press the hotkey — see results as you speak
-- **Offline engine** (SenseVoice): After releasing the hotkey, performs high-accuracy recognition on the full audio and automatically replaces the streaming results
-- The streaming engine handles real-time feedback while the offline engine ensures final quality — seamless collaboration
-
-### 3. Single-Key CTRL, Smart Intent Detection
-Just hold the Ctrl key to start recording. The app automatically detects your intent:
-- If another key is pressed within 2 seconds of pressing Ctrl → auto-cancel, no interference with Ctrl+C, Ctrl+V, etc.
-- Overly short recordings (< 0.8s) are automatically discarded to avoid accidental garbage text
-- Original clipboard content is restored after pasting, preserving your existing copy-paste workflow
-
-## Features
-
-- **Fully Local** — Streaming Zipformer + SenseVoice dual-engine, entirely offline, zero privacy concerns
-- **CPU-Only, No GPU Needed** — Runs smoothly on any modern laptop or desktop; no CUDA or dedicated GPU required
-- **Streaming Real-Time Feedback** — See recognition results as you speak via the overlay floating window
-- **SenseVoice Quality Correction** — Automatically replaces streaming results with high-accuracy offline engine output
-- **Automatic Punctuation** — Punctuation marks (。, ? etc.) output directly, no extra model needed, faster recognition
-- **Voice Activity Detection** — Ten-VAD filters out silent pauses, eliminating garbage characters (adjustable sensitivity)
-- **Offline Recognition** — No internet or API keys needed; models auto-download on first launch (including VAD model)
-- **China Mainland Download Acceleration** — Automatically uses a mirror site for faster model downloads in Simplified Chinese environments
-- **Multi-Engine ASR** — Local engine (default), Tencent Cloud ASR, Google Gemini — customizable priority order
-- **Auto Fallback** — Set priority order; if one engine fails, the next one is tried automatically
-- **Cross-Platform** — Supports Windows, macOS, and Linux
-- **Hotkey Trigger** — Hold Ctrl to start recording, release to auto-recognize and paste
-- **Listening Mode** — Double-tap right Ctrl to activate continuous listening and recognition until manually turned off
-- **Live Caption Mode** 🧪 — Captures system audio output for real-time recognition, displayed as multi-line captions in the overlay, with auto-saved transcript on close (mid-segment SenseVoice dual-color recognition is an experimental feature)
-- **Conference Mode** 🧪 — Simultaneously captures microphone (local) and system audio (remote), dual overlay shows both parties' recognition results in real time, built-in echo suppression, speaker voiceprint recognition, auto-saves merged transcript with timestamps, source and speaker labels on close
-- **AI Assistant Mode** — Background listening for a custom wake word, automatically starts AI conversation on detection, supports multi-turn voice context, text input bar fallback, AI responses rendered in Markdown/KaTeX/Mermaid rich format
-- **Ctrl+Shift+L Instant Assistant** — One-key shortcut to skip the wake word and jump straight into AI conversation, overlay appears immediately, TTS voice reply "I'm here."
-- **AI Proofreading** — Auto-corrects typos and punctuation via LLM when closing caption/conference mode
-- **AI Meeting Summary** — Auto-generates structured summary via LLM when saving conference transcript
-- **System Tray** — Runs in the background without disrupting your workflow
-- **Log Directory Shortcut** — One-click access to transcript folder from tray menu
-- **Simplified/Traditional Conversion** — Automatically converts Chinese text based on system locale, applies to both streaming and final results
-- **Multi-Language UI** — Supports 繁體中文, 简体中文, and English interface
-- **Auto-Start on Boot** — Supports launching automatically on system startup
-- **Clipboard Protection** — Original clipboard content is restored after pasting
-
-## Supported ASR Engines
-
-### Local Dual-Engine (Default)
-- **Streaming Zipformer** (real-time) — Bilingual Chinese-English streaming recognition, results shown as you speak
-- **SenseVoice-Small** (offline correction) — High-accuracy offline recognition, supports Chinese, English, Japanese, and Korean, with automatic punctuation
-- Features: Fully offline, zero privacy concerns, auto-downloads models on first launch
-- Model storage location: `C:\ProgramData\Voxinel\models\` (Windows)
-
-### Tencent Cloud ASR
-- **SentenceRecognition API** — Synchronous recognition
-- Supported engines: 16k_zh, 16k_zh_video, 16k_en, 16k_yue, 16k_ca
-- Requires: Secret ID + Secret Key
-
-### Google Gemini
-- **Cloud AI speech recognition**
-- Supports the Gemini 3.5 / 3.8 series, with the dedicated transcription model gemini-3.5-transcribe as the default
-- Automatic punctuation, filler word removal, configurable output language
-- Requires: API Key
-
-## Quick Start
-
-### Installation
-
-Download the installer from the [Releases page](https://github.com/ascetic168/Voxinel/releases).
-
-### First Launch
-
-1. The settings window opens automatically on first launch
-2. Click the "Download Models" button to auto-download streaming and offline recognition models
-3. Once downloaded, you're ready to go — no API key configuration needed
-
-> **Disk space requirement**: On first launch, offline recognition models must be downloaded from the internet (streaming Zipformer, SenseVoice, VAD, speaker voiceprint, TTS, etc.), totaling roughly **600MB** of extra disk space.
-
-### Usage
-
-1. Hold the Ctrl key and start speaking (the overlay window shows streaming recognition results in real time)
-2. Release the Ctrl key — SenseVoice automatically performs high-accuracy correction and adds punctuation
-3. Recognition results are automatically pasted into the current application
-4. Original clipboard content is automatically restored
 
 ## License
 
