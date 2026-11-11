@@ -2,7 +2,7 @@
 
 **[正體中文](README.md)** | **[简体中文](README.zh-CN.md)** | **[English](README.en.md)**
 
-![Version](https://img.shields.io/badge/version-0.5.10-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
+![Version](https://img.shields.io/badge/version-0.6.0-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
 
 > **按住 Ctrl 開口說話，放開自動打字。**
 > 全本地語音輸入工具 — 串流辨識邊說邊出字，SenseVoice 高精度修正；純 CPU 流暢運行，免 GPU、免上雲、免 API 金鑰。
@@ -51,7 +51,6 @@
 | **傾聽模式** | 連按兩下右 `Ctrl` | 麥克風 | 長文聽寫，逐句貼上 |
 | **即時字幕模式** 🧪 | 系統托盤選單 | 系統播放的聲音 | 影片／演講／通話字幕 |
 | **會議模式** 🧪 | 系統托盤選單 | 麥克風＋系統音訊 | 會議逐字稿、說話人標示、AI 摘要 |
-| **AI 助手模式** | 喚醒詞或 `Ctrl+Shift+L` | 麥克風＋文字輸入 | 免打字問 AI，語音回覆 |
 
 五種模式互斥運作、自動切換；細節見[使用說明書](docs/zh-TW/index.md)。
 
@@ -67,7 +66,6 @@
 **進階模式**
 - 即時字幕模式 🧪 — 系統音訊即時字幕，關閉時自動存檔
 - 會議模式 🧪 — 近端＋遠端雙軌記錄、回音抑制、聲紋自動標示說話人
-- AI 助手 — 自訂喚醒詞、多輪語音對話、TTS 語音回覆（103 種音色）、Markdown／KaTeX／Mermaid 渲染
 
 **AI 加持（透過本機 Ollama 或 OpenAI 相容 LLM）**
 - AI 輔助校稿 — 關閉字幕／會議模式時自動修正文稿
@@ -92,7 +90,7 @@
 ## 安裝與快速開始
 
 1. 至 [Releases 頁面](https://github.com/ascetic168/Voxinel/releases)下載安裝檔
-2. 首次啟動自動開啟設定視窗，點擊下載即自動取得所有模型（串流、離線、VAD、聲紋、TTS 合計約 **600MB**）
+2. 首次啟動自動開啟設定視窗，點擊下載即自動取得所有模型（串流、離線、VAD、聲紋合計約 **460MB**）
 3. 下載完成即可使用，無需設定任何 API 金鑰；之後完全離線運行
 
 ## 截圖
@@ -107,13 +105,13 @@
 
 ## 最新版本
 
-✅ **已發布 v0.5.10** — 強化 PTT 誤觸防護：與其他修飾鍵連按不啟動錄音、錄音中任何按鍵立即取消，空辨識結果不再注入模擬貼上按鍵，解決鍵盤輸入偶爾殘留怪字元的問題。
+✅ **已發布 v0.6.0** — 聲紋辨識大改版：比對／註冊策略重構，修復影片音源同一人被反覆註冊成多個 Speaker 的碎片化問題；聲紋管理新增「聲紋登記」流程（朗讀句子、3 秒倒數、10 秒錄音、名稱／註解），登記的聲紋可附加註解。
+
+<details><summary>v0.5.10</summary>v0.5.10 — 強化 PTT 誤觸防護：與其他修飾鍵連按不啟動錄音、錄音中任何按鍵立即取消，空辨識結果不再注入模擬貼上按鍵，解決鍵盤輸入偶爾殘留怪字元的問題。</details>
 
 <details><summary>v0.5.9</summary>v0.5.9 — AI 助手語音回覆音色可在設定頁選擇與試聽（預設改用中文音色），助手視窗開啟時 PTT 熱鍵不再誤觸。</details>
 
 <details><summary>v0.5.8</summary>v0.5.8 — 修復從托盤選單啟動傾聽模式時，辨識文字未貼入目標視窗的問題。</details>
-
-<details><summary>v0.5.7</summary>v0.5.7 — 修復辨識完成後偶爾無法貼上或貼到錯誤視窗的焦點問題，辨識狀態機新增卡死保底機制。</details>
 
 ## 授權
 

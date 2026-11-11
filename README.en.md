@@ -2,7 +2,7 @@
 
 **[正體中文](README.md)** | **[简体中文](README.zh-CN.md)** | **[English](README.en.md)**
 
-![Version](https://img.shields.io/badge/version-0.5.10-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
+![Version](https://img.shields.io/badge/version-0.6.0-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
 
 > **Hold Ctrl, speak, and your words are typed for you.**
 > A fully local voice-input tool — streaming recognition shows text as you speak, SenseVoice polishes it after you release. Runs smoothly on CPU alone: no GPU, no cloud, no API keys.
@@ -17,7 +17,6 @@
 | Dictate long passages | Double-tap **right** `Ctrl` for Listening Mode; sentences paste themselves |
 | Caption a video or call | System tray menu → Live Caption Mode |
 | Meeting minutes + AI summary | System tray menu → Conference Mode |
-| Ask AI without typing | Say the wake word (小花同學), or press `Ctrl+Shift+L` |
 
 First time: [download the installer](https://github.com/ascetic168/Voxinel/releases) → models download automatically on launch (~600MB, one time only) → start talking.
 
@@ -51,7 +50,6 @@ Hold Ctrl to record; the app detects your intent the whole time: chords with oth
 | **Listening Mode** | Double-tap right `Ctrl` | Microphone | Long dictation, sentence-by-sentence pasting |
 | **Live Caption Mode** 🧪 | System tray menu | System playback | Captions for videos／talks／calls |
 | **Conference Mode** 🧪 | System tray menu | Microphone + system audio | Meeting transcripts, speaker labels, AI summary |
-| **AI Assistant Mode** | Wake word or `Ctrl+Shift+L` | Microphone + text input | Hands-free Q&A with voice replies |
 
 Modes run exclusively and switch automatically; details in the [user manual](docs/en/index.md).
 
@@ -67,7 +65,6 @@ Modes run exclusively and switch automatically; details in the [user manual](doc
 **Advanced modes**
 - Live Caption Mode 🧪 — real-time captions of system audio, transcript saved on close
 - Conference Mode 🧪 — local + remote dual-track recording, echo suppression, automatic speaker voiceprint labels
-- AI Assistant — custom wake word, multi-turn voice conversation, TTS replies (103 voices), Markdown／KaTeX／Mermaid rendering
 
 **AI-powered (via local Ollama or any OpenAI-compatible LLM)**
 - AI proofreading — transcripts auto-corrected when closing caption／conference mode
@@ -92,7 +89,7 @@ Model storage location: `C:\ProgramData\Voxinel\models\` (Windows).
 ## Installation & Quick Start
 
 1. Download the installer from the [Releases page](https://github.com/ascetic168/Voxinel/releases)
-2. First launch opens the settings window and auto-downloads all models (streaming, offline, VAD, speaker, TTS — ~**600MB** total)
+2. First launch opens the settings window and auto-downloads all models (streaming, offline, VAD, speaker — ~**460MB** total)
 3. Once downloaded you're ready to go — no API keys to configure, fully offline from then on
 
 ## Screenshots
@@ -107,13 +104,13 @@ Model storage location: `C:\ProgramData\Voxinel\models\` (Windows).
 
 ## Latest Release
 
-✅ **Released v0.5.10** — Hardened PTT against accidental triggers: chords with other modifiers no longer start a recording, any keypress now cancels it immediately, and empty recognition results no longer inject simulated paste keystrokes — fixing stray characters appearing during keyboard typing.
+✅ **Released v0.6.0** — Speaker recognition rework: the matching/registration strategy was rebuilt to fix voiceprint fragmentation (one narrator in video audio repeatedly registered as multiple Speaker labels), and the speaker manager gains a guided voiceprint enrollment flow (read-aloud phrase, 3s countdown, 10s recording, name/note annotation).
+
+<details><summary>v0.5.10</summary>v0.5.10 — Hardened PTT against accidental triggers: chords with other modifiers no longer start a recording, any keypress now cancels it immediately, and empty recognition results no longer inject simulated paste keystrokes — fixing stray characters appearing during keyboard typing.</details>
 
 <details><summary>v0.5.9</summary>v0.5.9 — Assistant TTS voice is now selectable with preview in Settings (defaults to a Mandarin voice), and the PTT hotkey no longer mis-fires while the assistant window is open.</details>
 
 <details><summary>v0.5.8</summary>v0.5.8 — Fixed recognized text not pasting into the target window when listening mode was started from the tray menu.</details>
-
-<details><summary>v0.5.7</summary>v0.5.7 — Fixed the focus race that occasionally left recognized text unpasted or pasted into the wrong window, and added a stuck-pending failsafe to the recognition state machine.</details>
 
 ## License
 
