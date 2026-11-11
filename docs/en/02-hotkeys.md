@@ -8,8 +8,6 @@
 |---|---|---|
 | Push-to-Talk (PTT) | Hold `Ctrl` and speak; release to recognize and paste | ✅ Choose from five combos |
 | Toggle Listening Mode | Double-tap **right** `Ctrl` (within 1 second) | ❌ Fixed |
-| Open the AI Assistant instantly | `Ctrl+Shift+L` | ❌ Fixed |
-| Wake the AI Assistant | Say the wake word (default: 小花同學) | ✅ Wake word is editable |
 
 ## PTT Hotkey Combos
 
@@ -44,7 +42,7 @@ A single-key Ctrl shares the same physical key as everyday Ctrl+C / Ctrl+V, so V
 
 ## Global Rules
 
-- PTT is temporarily disabled while **Listening Mode is active** or **the AI Assistant window is open**
+- PTT is temporarily disabled while **Listening Mode is active**
 - Hotkey changes take effect immediately — no restart needed
 
 ---

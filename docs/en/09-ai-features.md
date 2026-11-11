@@ -1,14 +1,13 @@
 [📖 Contents](index.md)
 
-# 10 AI Features & LLM Setup
+# 09 AI Features & LLM Setup
 
-Voxinel's three AI features share one **OpenAI-compatible LLM endpoint** configuration (Base URL + model name + API Key):
+Voxinel's two AI features share one **OpenAI-compatible LLM endpoint** configuration (Base URL + model name + API Key):
 
 | Feature | When it runs | What it does |
 |---|---|---|
 | AI Proofreading | Before saving a Live Caption／Conference transcript | Fixes typos and punctuation, merges sentences broken across lines; timestamps preserved |
 | AI Meeting Summary | When the conference transcript is saved | Produces a Markdown summary with sections for summary, attendees, topics, decisions, action items |
-| AI Assistant | Wake word／`Ctrl+Shift+L` conversation | Voice Q&A with multi-turn context and Markdown／KaTeX／Mermaid replies |
 
 ## Option A: Local Ollama (default — free, fully offline)
 
@@ -31,7 +30,6 @@ Fill in the API Key and save.
 
 ## Verifying It Works
 
-- **AI Assistant**: press `Ctrl+Shift+L` and ask something — you should get a reply
 - **Proofreading／Summary**: run Conference Mode, say one sentence, close it, and check whether the saved transcript was corrected and whether a summary file appeared
 - The endpoint is health-checked at app startup; if Ollama wasn't running yet, start it and **restart Voxinel**
 
@@ -40,10 +38,9 @@ Fill in the API Key and save.
 | Symptom | Likely cause |
 |---|---|
 | Proofreading／summary does nothing | Feature not checked; LLM endpoint unavailable (startup health check failed) |
-| Assistant stuck on 思考中 (thinking) | Wrong endpoint or model name; invalid API Key |
 | 404 / model not found | Model name doesn't match the service; Base URL path incomplete |
 | Slow responses | Cloud network latency; local model too large — try a smaller one |
 
 ---
 
-[← 09 Settings Reference](09-settings.md) | [Contents](index.md) | [11 Files & Data Locations →](11-data-and-files.md)
+[← 08 Settings Reference](08-settings.md) | [Contents](index.md) | [10 Files & Data Locations →](10-data-and-files.md)

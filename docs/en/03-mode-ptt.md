@@ -37,7 +37,7 @@ When you release the hotkey, the amber portion is replaced by the high-accuracy 
 
 ## Using Cloud Engines
 
-With [Tencent Cloud or Gemini ranked first](08-engines.md), PTT works the same — hold, speak, release, paste — but there is **no live streaming display**: after you release, the whole clip (silence-stripped by VAD) is sent to the cloud, then pasted. Keep the local engine in first place if you want the live feedback.
+With [Tencent Cloud or Gemini ranked first](07-engines.md), PTT works the same — hold, speak, release, paste — but there is **no live streaming display**: after you release, the whole clip (silence-stripped by VAD) is sent to the cloud, then pasted. Keep the local engine in first place if you want the live feedback.
 
 ## Tips
 

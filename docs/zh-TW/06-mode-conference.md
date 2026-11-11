@@ -38,17 +38,22 @@
 
 關閉模式時依序執行：
 
-1. 近端與遠端文字依時間排序合併，存為 `Documents\Voxinel\conference_YYYYMMDD_HHMMSS.txt`：
+1. 近端與遠端文字依時間排序合併，存為 `Documents\Voxinel\conference_YYYYMMDD_HHMMSS.txt`。同一發言人連續發言合併為一個區塊，只在區塊首行標時間與發言人：
 
 ```
 # 會議記錄 — 2026-10-31 14:00:00
 # 時長: 1830.0 秒 | 遠端: 42 段 | 近端: 18 段
-[14:00:12] 遠端 [Speaker_1]：大家早安，我們開始今天的會議
-[14:00:25] 近端：好的，我先報告上週進度
+
+[14:00:12] 遠端 [Speaker_1]：
+大家早安，我們開始今天的會議
+今天主要討論三件事
+
+[14:00:25] 近端：
+好的，我先報告上週進度
 ```
 
 2. 若啟用「AI 輔助校稿」→ 先以 LLM 修正錯字與標點再存檔
-3. 若啟用「AI 會議摘要」→ 額外產生 `conference_summary_YYYYMMDD_HHMMSS.md`，內容包含摘要、與會者、討論主題、重要決議、行動項目等段落（見[AI 功能與 LLM 設定](10-ai-features.md)）
+3. 若啟用「AI 會議摘要」→ 額外產生 `conference_summary_YYYYMMDD_HHMMSS.md`，內容包含摘要、與會者、討論主題、重要決議、行動項目等段落（見[AI 功能與 LLM 設定](09-ai-features.md)）
 
 ## 僅記錄、不顯示字幕
 
@@ -62,4 +67,4 @@
 
 ---
 
-[← 05 即時字幕模式](05-mode-caption.md) | [目錄](index.md) | [07 AI 助手模式 →](07-mode-assistant.md)
+[← 05 即時字幕模式](05-mode-caption.md) | [目錄](index.md) | [07 語音辨識來源 →](07-engines.md)

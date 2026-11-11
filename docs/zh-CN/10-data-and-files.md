@@ -1,6 +1,6 @@
 [📖 目录](index.md)
 
-# 11 文件与数据位置
+# 10 文件与数据位置
 
 ## 模型目录
 
@@ -16,7 +16,6 @@
 | `streaming\` | Zipformer 流式识别（4 个文件） | 58MB |
 | `vad\` | Ten-VAD 语音活动检测 | 342KB |
 | `speaker\` | 声纹识别模型＋`speakers.db` 声纹数据库 | 130MB |
-| `tts\kokoro-int8-multi-lang-v1_1\` | TTS 语音合成 | 140MB |
 
 ## 记录文件
 
@@ -49,4 +48,4 @@ Voxinel 平时**不写日志文件**。需要诊断问题时，以 `--debug` 参
 
 ---
 
-[← 10 AI 功能与 LLM 设置](10-ai-features.md) | [目录](index.md) | [12 常见问题与疑难排解 →](12-faq.md)
+[← 09 AI 功能与 LLM 设置](09-ai-features.md) | [目录](index.md) | [11 常见问题与疑难排解 →](11-faq.md)

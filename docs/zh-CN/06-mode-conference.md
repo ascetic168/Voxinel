@@ -38,17 +38,22 @@
 
 关闭模式时依序执行：
 
-1. 近端与远端文字依时间排序合并，存为 `Documents\Voxinel\conference_YYYYMMDD_HHMMSS.txt`：
+1. 近端与远端文字依时间排序合并，存为 `Documents\Voxinel\conference_YYYYMMDD_HHMMSS.txt`。同一发言人连续发言合并为一个区块，只在区块首行标时间与发言人：
 
 ```
 # 会议记录 — 2026-10-31 14:00:00
 # 时长: 1830.0 秒 | 远端: 42 段 | 近端: 18 段
-[14:00:12] 远端 [Speaker_1]：大家早安，我们开始今天的会议
-[14:00:25] 近端：好的，我先报告上周进度
+
+[14:00:12] 远端 [Speaker_1]：
+大家早安，我们开始今天的会议
+今天主要讨论三件事
+
+[14:00:25] 近端：
+好的，我先报告上周进度
 ```
 
 2. 若启用「AI 辅助校稿」→ 先以 LLM 修正错别字与标点再存档
-3. 若启用「AI 会议摘要」→ 额外产生 `conference_summary_YYYYMMDD_HHMMSS.md`，内容包括摘要、与会者、讨论主题、重要决议、行动项目等段落（见[AI 功能与 LLM 设置](10-ai-features.md)）
+3. 若启用「AI 会议摘要」→ 额外产生 `conference_summary_YYYYMMDD_HHMMSS.md`，内容包括摘要、与会者、讨论主题、重要决议、行动项目等段落（见[AI 功能与 LLM 设置](09-ai-features.md)）
 
 ## 仅记录、不显示字幕
 
@@ -62,4 +67,4 @@
 
 ---
 
-[← 05 即时字幕模式](05-mode-caption.md) | [目录](index.md) | [07 AI 助手模式 →](07-mode-assistant.md)
+[← 05 即时字幕模式](05-mode-caption.md) | [目录](index.md) | [07 语音识别来源 →](07-engines.md)

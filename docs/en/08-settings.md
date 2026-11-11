@@ -1,10 +1,9 @@
 [📖 Contents](index.md)
 
-# 09 Settings Reference
+# 08 Settings Reference
 
 Open via: system tray menu → 設置 (Settings). Changes take effect only after clicking **Save Settings**; Cancel reverts unsaved changes. Closing the window with X only hides it to the tray.
 
-> The "AI 助手模式" and "TTS 語音回覆" sections currently display in Traditional Chinese regardless of the interface language.
 
 ## Speech Recognition (語音辨識來源)
 
@@ -12,7 +11,7 @@ Open via: system tray menu → 設置 (Settings). Changes take effect only after
 |---|---|---|
 | Source list | Enabled recognition sources; the number is the priority. Click an item to expand its details | Local Offline (SenseVoice) |
 | ▲ / ▼ / ✕ | Reorder / remove sources | — |
-| Provider / Model | Choose the source and model (available models per source: see [engines](08-engines.md)) | — |
+| Provider / Model | Choose the source and model (available models per source: see [engines](07-engines.md)) | — |
 | Credential fields | Depends on the source: Secret ID／Secret Key (Tencent Cloud), API Key (Gemini), Model Directory (local — usually leave as is) | empty |
 | Test Connection | Check the currently selected source | — |
 
@@ -43,7 +42,7 @@ Open via: system tray menu → 設置 (Settings). Changes take effect only after
 | Field | Description | Default |
 |---|---|---|
 | Launch at system startup | Start Voxinel automatically at login | ❌ Off |
-| Conference Mode: Hide overlay windows (recording only) | Conference mode runs without overlay windows, recognizing and saving in the background | ❌ Off |
+| Conference Mode: Hide overlay windows (recording only) | Conference mode runs without overlay windows, recognizing and saving in the background | ✅ On |
 
 ## AI Proofreading (AI 輔助校稿)
 
@@ -58,29 +57,10 @@ Open via: system tray menu → 設置 (Settings). Changes take effect only after
 
 | Field | Description | Default |
 |---|---|---|
-| Enable AI meeting summary | Auto-generates a structured summary when the conference transcript is saved; uses the **same LLM settings** as proofreading | ❌ Off |
-
-## AI Assistant Mode (AI 助手模式)
-
-| Field | Description | Default |
-|---|---|---|
-| Enable AI assistant mode | Background wake-word listening when other modes are idle | ✅ On |
-| Wake word | Hearing it starts a conversation with the reply 我在。 | 小花同學 |
-| Extra prompt | Appended after the built-in system prompt to customize the assistant's persona and style | empty |
-
-## TTS Voice Replies (TTS 語音回覆)
-
-| Field | Description | Default |
-|---|---|---|
-| Enable voice replies | AI assistant replies are also spoken as a short conversational version | ✅ On |
-| Speech rate | 0.5x (slow) – 2.0x (fast) | 1.0x |
-| Voice | 103 voices: English female, Chinese female, Chinese male | Chinese female zf_001 |
-| 🔊 Preview | Preview the selected voice at the current rate | — |
-
-## About (關於)
+| Enable AI meeting summary | Auto-generates a structured summary when the conference transcript is saved; uses the **same LLM settings** as proofreading | ❌ Off |## About (關於)
 
 Shows the version, author (朱國棟 / Charlie Chu), contact email, and license.
 
 ---
 
-[← 08 Speech Recognition Sources](08-engines.md) | [Contents](index.md) | [10 AI Features & LLM Setup →](10-ai-features.md)
+[← 07 Speech Recognition Sources](07-engines.md) | [Contents](index.md) | [09 AI Features & LLM Setup →](09-ai-features.md)

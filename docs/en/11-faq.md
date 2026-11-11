@@ -1,6 +1,6 @@
 [📖 Contents](index.md)
 
-# 12 FAQ & Troubleshooting
+# 11 FAQ & Troubleshooting
 
 ## Voice Input
 
@@ -42,30 +42,13 @@ The paste target is locked **when the mode is activated**. To switch: double-tap
 - Clips under 0.5 s are always unknown; speak at a normal pace
 - Voiceprints improve with exposure — the more a person speaks, the more accurate
 - Open "Speaker Management" and rename `Speaker_N` to the person's real name; future transcripts will show it
-
-### The AI Assistant won't wake up?
-
-1. Check that "AI Assistant Mode" is enabled in Settings (on by default)
-2. Background listening pauses while other modes (listening／caption／conference) are running
-3. Say the wake word completely; or simply press `Ctrl+Shift+L`, which is the most reliable
-4. PTT is disabled while the assistant window is open — that's intentional misfire protection
-
-### I closed the settings window by accident?
-
-X only hides it to the tray. Click the tray icon → 設置 (Settings) to bring it back.
-
 ## AI Features
 
 ### Proofreading／summary does nothing?
 
 1. Make sure the feature is checked in Settings
-2. Make sure the LLM endpoint works (see [AI Features & LLM Setup](10-ai-features.md)): is local Ollama running? is the model name correct?
+2. Make sure the LLM endpoint works (see [AI Features & LLM Setup](09-ai-features.md)): is local Ollama running? is the model name correct?
 3. The endpoint is health-checked at startup — if Ollama wasn't running then, start it and restart Voxinel
-
-### The assistant is stuck on "thinking"?
-
-Check the Base URL, model name, and API Key. With Ollama, run `ollama list` to confirm the configured model exists.
-
 ## Engines & Models
 
 ### Model download fails or is slow?
@@ -76,7 +59,7 @@ Check the Base URL, model name, and API Key. With Ollama, run `ollama list` to c
 
 ### Can I use only cloud engines?
 
-Yes. Rank a cloud source first — PTT works the same, just without the as-you-speak live display (see [engines](08-engines.md)).
+Yes. Rank a cloud source first — PTT works the same, just without the as-you-speak live display (see [engines](07-engines.md)).
 
 ## Platforms & Misc
 
@@ -94,4 +77,4 @@ Email: charliechu1688@gmail.com
 
 ---
 
-[← 11 Files & Data Locations](11-data-and-files.md) | [Contents](index.md)
+[← 10 Files & Data Locations](10-data-and-files.md) | [Contents](index.md)

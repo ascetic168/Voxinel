@@ -29,7 +29,7 @@ When you close the mode, a transcript is saved to `Documents\Voxinel\caption_YYY
 [14:05:09] Second caption line
 ```
 
-(The on-disk file header is written in Chinese.) If "AI Proofreading" is enabled, the lines are corrected by an LLM before saving — see [AI Features & LLM Setup](10-ai-features.md). The tray item "Open transcript folder" opens the folder directly.
+(The on-disk file header is written in Chinese.) If "AI Proofreading" is enabled, the lines are corrected by an LLM before saving — see [AI Features & LLM Setup](09-ai-features.md). The tray item "Open transcript folder" opens the folder directly.
 
 ## Common Questions
 

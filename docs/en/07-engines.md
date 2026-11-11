@@ -1,6 +1,6 @@
 [📖 Contents](index.md)
 
-# 08 Speech Recognition Sources (ASR Engines)
+# 07 Speech Recognition Sources (ASR Engines)
 
 Voxinel supports three recognition sources. You can enable several at once and rank them by **priority**: recognition tries the first one and falls back to the next on failure (Fallback).
 
@@ -8,12 +8,12 @@ Voxinel supports three recognition sources. You can enable several at once and r
 
 | Engine | Role | Description |
 |---|---|---|
-| Streaming Zipformer | Real-time | Bilingual Chinese-English streaming model; shows text as you speak. Powers PTT live display, plus listening／caption／conference／assistant modes |
+| Streaming Zipformer | Real-time | Bilingual Chinese-English streaming model; shows text as you speak. Powers PTT live display, plus listening／caption／conference modes |
 | SenseVoice-Small (INT8) | Offline correction | High-accuracy offline recognition; Chinese, English, Japanese, Korean, Cantonese; automatic punctuation |
 
 - Runs entirely on your local CPU; audio never leaves the machine
 - Models auto-download on first launch (~600MB total); Simplified-Chinese systems automatically use a download mirror
-- Model location: see [Files & Data Locations](11-data-and-files.md)
+- Model location: see [Files & Data Locations](10-data-and-files.md)
 
 ## Tencent Cloud ASR
 
@@ -60,4 +60,4 @@ Credentials can also come from environment variables (used as fallback when the 
 
 ---
 
-[← 07 AI Assistant Mode](07-mode-assistant.md) | [Contents](index.md) | [09 Settings Reference →](09-settings.md)
+[← 06 Conference Mode & Speakers](06-mode-conference.md) | [Contents](index.md) | [08 Settings Reference →](08-settings.md)

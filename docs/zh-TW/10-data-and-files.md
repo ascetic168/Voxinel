@@ -1,6 +1,6 @@
 [📖 目錄](index.md)
 
-# 11 檔案與資料位置
+# 10 檔案與資料位置
 
 ## 模型目錄
 
@@ -16,7 +16,6 @@
 | `streaming\` | Zipformer 串流辨識（4 個檔案） | 58MB |
 | `vad\` | Ten-VAD 語音活動偵測 | 342KB |
 | `speaker\` | 聲紋辨識模型＋`speakers.db` 聲紋資料庫 | 130MB |
-| `tts\kokoro-int8-multi-lang-v1_1\` | TTS 語音合成 | 140MB |
 
 ## 記錄檔
 
@@ -49,4 +48,4 @@ Voxinel 平時**不寫日誌檔**。需要診斷問題時，以 `--debug` 參數
 
 ---
 
-[← 10 AI 功能與 LLM 設定](10-ai-features.md) | [目錄](index.md) | [12 常見問題與疑難排解 →](12-faq.md)
+[← 09 AI 功能與 LLM 設定](09-ai-features.md) | [目錄](index.md) | [11 常見問題與疑難排解 →](11-faq.md)

@@ -38,17 +38,22 @@ Voiceprint data is stored in the model directory as `speaker\speakers.db` (SQLit
 
 When you close the mode:
 
-1. Local and remote text merge in timestamp order and save to `Documents\Voxinel\conference_YYYYMMDD_HHMMSS.txt`:
+1. Local and remote text merge in timestamp order and save to `Documents\Voxinel\conference_YYYYMMDD_HHMMSS.txt`. Consecutive lines from the same speaker are grouped into one block — the timestamp and speaker appear only on the block's first line:
 
 ```
 # 會議記錄 (Meeting Record) — 2026-10-31 14:00:00
 # 時長 (Duration): 1830.0 s | 遠端 (Remote): 42 segments | 近端 (Local): 18 segments
-[14:00:12] 遠端 [Speaker_1]：大家早安，我們開始今天的會議
-[14:00:25] 近端：好的，我先報告上週進度
+
+[14:00:12] 遠端 [Speaker_1]：
+大家早安，我們開始今天的會議
+今天主要討論三件事
+
+[14:00:25] 近端：
+好的，我先報告上週進度
 ```
 
 2. If "AI Proofreading" is enabled → lines are corrected by the LLM before saving
-3. If "AI Meeting Summary" is enabled → an additional `conference_summary_YYYYMMDD_HHMMSS.md` is generated with sections for summary, attendees, topics, decisions, and action items (see [AI Features & LLM Setup](10-ai-features.md))
+3. If "AI Meeting Summary" is enabled → an additional `conference_summary_YYYYMMDD_HHMMSS.md` is generated with sections for summary, attendees, topics, decisions, and action items (see [AI Features & LLM Setup](09-ai-features.md))
 
 ## Record Without Captions
 
@@ -62,4 +67,4 @@ Settings → "System Settings" → check "Conference Mode: Hide overlay windows 
 
 ---
 
-[← 05 Live Caption Mode](05-mode-caption.md) | [Contents](index.md) | [07 AI Assistant Mode →](07-mode-assistant.md)
+[← 05 Live Caption Mode](05-mode-caption.md) | [Contents](index.md) | [07 Speech Recognition Sources →](07-engines.md)

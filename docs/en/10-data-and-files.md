@@ -1,6 +1,6 @@
 [📖 Contents](index.md)
 
-# 11 Files & Data Locations
+# 10 Files & Data Locations
 
 ## Model Directory
 
@@ -16,7 +16,6 @@
 | `streaming\` | Zipformer streaming recognition (4 files) | 58MB |
 | `vad\` | Ten-VAD voice activity detection | 342KB |
 | `speaker\` | Speaker recognition model + `speakers.db` voiceprint database | 130MB |
-| `tts\kokoro-int8-multi-lang-v1_1\` | TTS speech synthesis | 140MB |
 
 ## Transcripts
 
@@ -49,4 +48,4 @@ Voxinel **does not write log files** in normal operation. For diagnostics, launc
 
 ---
 
-[← 10 AI Features & LLM Setup](10-ai-features.md) | [Contents](index.md) | [12 FAQ & Troubleshooting →](12-faq.md)
+[← 09 AI Features & LLM Setup](09-ai-features.md) | [Contents](index.md) | [11 FAQ & Troubleshooting →](11-faq.md)

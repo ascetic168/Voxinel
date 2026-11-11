@@ -26,7 +26,7 @@ Continuous dictation: once enabled, Voxinel keeps listening to your microphone a
 
 ## Relationship with Other Modes
 
-- Starting Listening Mode automatically stops the other modes (caption／conference／assistant) — modes are mutually exclusive
+- Starting Listening Mode automatically stops the other modes (caption／conference) — modes are mutually exclusive
 - While Listening Mode is active, Push-to-Talk is temporarily disabled so the two can't record at once
 
 ---
