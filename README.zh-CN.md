@@ -2,7 +2,7 @@
 
 **[正體中文](README.md)** | **[简体中文](README.zh-CN.md)** | **[English](README.en.md)**
 
-![Version](https://img.shields.io/badge/version-0.6.0-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
+![Version](https://img.shields.io/badge/version-0.6.1-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
 
 > **按住 Ctrl 开口说话，放开自动打字。**
 > 全本地语音输入工具 — 流式识别边说边出字，SenseVoice 高精度修正；纯 CPU 流畅运行，免 GPU、免上云、免 API 密钥。
@@ -105,7 +105,7 @@
 
 ## 最新版本
 
-✅ **已发布 v0.6.0** — 声纹辨识大改版：比对/注册策略重构，修复影片音源同一人被反复注册成多个 Speaker 的碎片化问题；声纹管理新增「声纹登记」流程（朗读句子、3 秒倒数、10 秒录音、名称/注解），登记的声纹可附加注解。
+✅ **已发布 v0.6.1** — 断句大改版：会议/字幕模式移除连续讲话强制切断，改由静音确认与声纹换人侦测决定断行；修复长段落下 Speaker 标签消失问题，unknown 讲者改为显示以利事后登录；抑制近端幻影段落；新增会议麦克风静音钮与字幕模式 toast 回馈。
 
 <details><summary>v0.5.10</summary>v0.5.10 — 强化 PTT 误触防护：与其他修饰键连按不启动录音、录音中任何按键立即取消，空识别结果不再注入模拟贴上按键，解决键盘输入偶尔残留怪字符的问题。</details>
 

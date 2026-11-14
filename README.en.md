@@ -2,7 +2,7 @@
 
 **[正體中文](README.md)** | **[简体中文](README.zh-CN.md)** | **[English](README.en.md)**
 
-![Version](https://img.shields.io/badge/version-0.6.0-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
+![Version](https://img.shields.io/badge/version-0.6.1-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
 
 > **Hold Ctrl, speak, and your words are typed for you.**
 > A fully local voice-input tool — streaming recognition shows text as you speak, SenseVoice polishes it after you release. Runs smoothly on CPU alone: no GPU, no cloud, no API keys.
@@ -104,7 +104,7 @@ Model storage location: `C:\ProgramData\Voxinel\models\` (Windows).
 
 ## Latest Release
 
-✅ **Released v0.6.0** — Speaker recognition rework: the matching/registration strategy was rebuilt to fix voiceprint fragmentation (one narrator in video audio repeatedly registered as multiple Speaker labels), and the speaker manager gains a guided voiceprint enrollment flow (read-aloud phrase, 3s countdown, 10s recording, name/note annotation).
+✅ **Released v0.6.1** — Segmentation overhaul: conference and caption modes drop fixed mid-speech force cuts; line breaks now come from confirmed silence and voiceprint speaker-change detection. Fixes speaker labels vanishing on long segments, surfaces unknown speakers in the transcript, suppresses phantom near-end lines, and adds a conference mic mute button plus caption-mode toasts.
 
 <details><summary>v0.5.10</summary>v0.5.10 — Hardened PTT against accidental triggers: chords with other modifiers no longer start a recording, any keypress now cancels it immediately, and empty recognition results no longer inject simulated paste keystrokes — fixing stray characters appearing during keyboard typing.</details>
 

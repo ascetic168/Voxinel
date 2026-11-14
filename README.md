@@ -2,7 +2,7 @@
 
 **[正體中文](README.md)** | **[简体中文](README.zh-CN.md)** | **[English](README.en.md)**
 
-![Version](https://img.shields.io/badge/version-0.6.0-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
+![Version](https://img.shields.io/badge/version-0.6.1-2563eb) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-64748b) ![Privacy](https://img.shields.io/badge/audio-100%25%20local-16a34a) ![GPU](https://img.shields.io/badge/GPU-not%20required-16a34a) ![License](https://img.shields.io/badge/license-freeware-f59e0b)
 
 > **按住 Ctrl 開口說話，放開自動打字。**
 > 全本地語音輸入工具 — 串流辨識邊說邊出字，SenseVoice 高精度修正；純 CPU 流暢運行，免 GPU、免上雲、免 API 金鑰。
@@ -65,7 +65,7 @@
 
 **進階模式**
 - 即時字幕模式 🧪 — 系統音訊即時字幕，關閉時自動存檔
-- 會議模式 🧪 — 近端＋遠端雙軌記錄、回音抑制、聲紋自動標示說話人
+- 會議模式 🧪 — 近端＋遠端雙軌記錄、回音抑制、聲紋自動標示說話人、右下角按鈕暫停近端錄音
 
 **AI 加持（透過本機 Ollama 或 OpenAI 相容 LLM）**
 - AI 輔助校稿 — 關閉字幕／會議模式時自動修正文稿
@@ -105,7 +105,7 @@
 
 ## 最新版本
 
-✅ **已發布 v0.6.0** — 聲紋辨識大改版：比對／註冊策略重構，修復影片音源同一人被反覆註冊成多個 Speaker 的碎片化問題；聲紋管理新增「聲紋登記」流程（朗讀句子、3 秒倒數、10 秒錄音、名稱／註解），登記的聲紋可附加註解。
+✅ **已發布 v0.6.1** — 斷句大改版：會議／字幕模式移除連續講話強制切斷，改由靜音確認與聲紋換人偵測決定斷行；修復長段落下 Speaker 標籤消失問題，unknown 講者改為顯示以利事後登錄；抑制近端幻影段落；新增會議麥克風靜音鈕與字幕模式 toast 回饋。
 
 <details><summary>v0.5.10</summary>v0.5.10 — 強化 PTT 誤觸防護：與其他修飾鍵連按不啟動錄音、錄音中任何按鍵立即取消，空辨識結果不再注入模擬貼上按鍵，解決鍵盤輸入偶爾殘留怪字元的問題。</details>
 
